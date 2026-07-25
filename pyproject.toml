@@ -1,0 +1,12 @@
+[project]
+name = "ai-ml-diary"
+version = "0.1.0"
+description = "A diary for my ai/ml experiments"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.1",
+    "sympy>=1.14.0",
+    "torch>=2.13.0",
+]
