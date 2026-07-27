@@ -1,13 +1,16 @@
 ## Linear vs Non-Linear operations
 **Linear:** Addition and multiplication based operations.
+
 **Non-linear:** Anything else.
 ## The perceptron model
 The perceptron model is used to represent what happens in every node (neuron) of a neural network.
 
 An artificial neuron takes a series of numerical inputs, transforms them using linear and non-linear operations, and outputs a singular value. This process is typically represented using the following formula:
+
 $$
 y_{prediction} = \sigma(bias + \sum_{i = 1}^n input_i * weight_i)
 $$
+
 Each input is multiplied by its respective weight variable, with the resulting values being summed together plus the "bias" variable. This sum value is then passed through a non-linear function (like a sigmoid, for example). 
 
 ![](perceptron.svg)
@@ -20,6 +23,7 @@ Every node in a neural network works as described by the perceptron model. They 
 The value computed by the forward propagation is not always accurate. When testing a model, its predictions are compared with a list of "expected" results and an error value can be calculated.
 
 **Binarized error:** easier to interpret, but less sensitive
+
 **Continuous error:** more sensitive, harder to interpret.
 
 These error values are used to generate **loss functions**.
