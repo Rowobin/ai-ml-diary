@@ -25,25 +25,33 @@ The value computed by the forward propagation is not always accurate. When testi
 These error values are used to generate **loss functions**.
 
 **Mean-squared error:** used for continuous data prediction when the output is a numerical prediction (height, temperature, ...).
+
 $$
 𝓛 = \frac{1}{2}(y_{prediction} - y_{expected})^2
 $$
-**Cross-entropy:** used for categorical data when the output is a probability.
+
+**Cross-entropy:** used for categorical data when the output is a probability (chance image is a cat, ...).
+
 $$
 𝓛 = -(y_{expected}\log(y_{prediction}) + (1-y_{expected}) log(1-y_{prediction}))
 $$
+
 The sum of multiple loss functions is called a **cost function**.
+
 $$
 𝓙 = \frac{1}{n} \sum_{i=1}^n{𝓛(y_{prediction_i}, y_{expected_i})}
 $$
+
 The prediction value (and, by consequence, the loss and cost values) is determined by the weights associated with each node. The goal of training deep learning models is to determine the set of weight values that minimize losses as much as possible.
 
 Typically, models are trained using the cost function over individual loss functions. This is because training on individual losses would be computationally expensive and potentially lead to overfitting.  That said, averaging too many samples may reduce sensitivity. A common solution is to train the model using batches of samples.
 ## Backwards propagation
 The goal of backwards propagation is to find the set of weights that minimizes the values of the loss functions as much as possible. This is done by using the gradient descent algorithm for each individual node and its weight.
+
 $$
 w = w - \frac{η∂𝓛}{∂w}
 $$
+
 The chain rule propagates the error backward from the output layer through each hidden layer.
 ## Some extra things I learned
 **Feature Space:** a geometric representation of the data, where each feature is an axis and each observation point is a coordinate.
